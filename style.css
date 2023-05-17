@@ -1,0 +1,172 @@
+:root{
+  --desaturatedRed: hsl(0, 36%, 70%);
+ --softRed: hsl(0, 93%, 68%);
+--darkGrayishRed: hsl(0, 6%, 24%);
+}
+@font-face {
+         font-family: myFont;
+         src: url('https://fonts.google.com/specimen/Josefin+Sans');
+      }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: white ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: myFont;
+}
+main{
+  background: white;
+  height: 90vh;
+}
+figure{
+  width: 412px;
+}
+section{
+  width: 412px;
+}
+#img{
+  height: 300px;
+  width: 412px;
+  background-image: url("/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#logo{
+  margin: -20px 0 0 5px;
+}
+img{
+  margin: 20px 0;
+}
+#coming{
+  margin-top: -20px;
+  height: 200px;
+  font-size: 40px;
+  font-weight: 300;
+  padding: 20px 70px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+#colored-text{
+  color: var(--desaturatedRed);
+}
+#paragraph{
+  color: var(--desaturatedRed);
+  font-size: 15px;
+  padding: 15px 25px;
+  text-align: center;
+  font-weight: 450;
+}
+input{
+  border: 1.5px solid var(--desaturatedRed);
+  color: black;
+  padding: 15px 15px;
+  font-size: 12px;
+  width: 90%;
+  margin: 0 20px;
+  border-radius: 30px;
+  position: relative;
+  height: 50px;
+  outline: none;
+}
+input::placeholder{
+  color: var(--desaturatedRed);
+  font-weight: 350;
+  filter: opacity(0.6);
+}
+input:focus{
+  border: 2px solid var(--softRed);
+}
+#btn{
+  margin: 0;
+  position: relative;
+  height: 50px;
+  width: 60px;
+  font-size: 10px;
+  top: -50px;
+  left: 330px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px 0 hsla(0, 80%, 86%, 80%);
+}
+#btn:hover{
+  background-image: linear-gradient(135deg, hsla(0, 80%, 86%, 50%), hsla(0, 74%, 74%, 50%));
+}
+#arrow{
+  position: absolute;
+}
+
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+  margin-top: -20px;
+}
+.attribution a {
+      color: hsl(228, 45%, 44%);
+}
+footer{
+  display: block;
+  bottom: 0;
+ margin: 20px 0;
+}
+.inpu{
+  position: relative;
+}
+#error-msg{
+  font-size: 10px;
+  display: inline-block;
+  position: relative;
+  bottom: 53px;
+  left: 40px;
+  color: var(--softRed);
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+#error-icon{
+  position: absolute;
+  bottom: 70px;
+  right: 90px;
+  width: 15px;
+  display: none;
+}
+@media(min-width : 415px){
+  body{
+    flex-direction: row;
+  }
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+  } 
+  section{
+    height: 600px;
+    background-image: url("/bg-pattern-desktop.svg");
+    background-size: contain;
+  }
+  #logo{
+    position: absolute;
+    left: 200px;
+    top: calc(100vh - 1270px);
+  }
+  #img{
+    background-image: url("/hero-desktop.jpg");
+    height: 600px;
+  }
+  #coming{
+    margin-top: 100px;
+  }
+}
